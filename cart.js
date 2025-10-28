@@ -6,8 +6,8 @@ const cart = [
 
 function calculateTotal(cartItems) {
   let total = 0;
-  for (let i = 0; i <= cartItems.length; i++) { // Bug: <= should be <
-      total += cartItems[i].price; // Bug: cartItems[i] is undefined on the last iteration
+  for (let i = 0; i < cartItems.length; i++) {
+      total += cartItems[i].price;
   }
   return total;
 }
